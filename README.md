@@ -3,7 +3,8 @@
 ## This application allows users to search for duo partners for various games. 
 ---
 # Original Wireframe and screenshots
-![alt text](https://imgur.com/a/TfnNKAR.png)
+![](https://imgur.com/a/TfnNKAR.png)
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/TfnNKAR" data-context="false" ><a href="//imgur.com/a/TfnNKAR"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 ---
 # technologies used
 - Javascript, CSS, HTML, DOM
