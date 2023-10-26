@@ -2,7 +2,7 @@
 ---
 ## This application allows users to search for duo partners for various games. 
 ---
-# screenshots here
+# Original Wireframe and screenshots
 ![alt text](https://imgur.com/a/TfnNKAR.png)
 ---
 # technologies used
