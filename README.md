@@ -33,3 +33,6 @@
 ---
 ### User Stories
 - AAU I want to be able to create an account, select my favorite game, display my rank, and find other users that play the same game. 
+- AAU I want to be able to update my rank as I climb or fall
+- AAU I want to be able to add, delete, or update usernames if I make new accounts or change my username. 
+- AAU I want to be able to delete my account for any reason
