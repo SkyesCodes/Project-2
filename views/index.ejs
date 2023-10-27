@@ -3,7 +3,8 @@
 <h2>Welcome to Duo Finder!</h2>
 
 <% if (!user) { %>
-	<p>please login to continue</p>
+	<p>Login or create an account with google</p>
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
 <% } else { %>
 	<p>Welcome, <%= user.name %> <%= user.email %></p>
 	<% if (user.avatar) { %>
