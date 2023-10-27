@@ -29,7 +29,7 @@
  ![ERD](https://imgur.com/7uHmOS7.png)
 ---
 ### REST Chart
-![REST](https://imgur.com/MHvSxkK.png)
+![REST](https://imgur.com/0xbM5QG.png)
 ---
 ### User Stories
 - AAU I want to be able to create an account, select my favorite game, display my rank, and find other users that play the same game. 
