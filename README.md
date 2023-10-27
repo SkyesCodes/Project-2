@@ -26,7 +26,7 @@
 - Add a section to select your 3 best characters/champions.
 ---
 ### ERD Chart
- ![ERD](https://imgur.com/EwJxfO9.png)
+ ![ERD](https://imgur.com/PT4i8oO.png)
 ---
 ### REST Chart
 ![REST](https://imgur.com/fyvuCEC.png)
