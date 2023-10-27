@@ -25,6 +25,11 @@
 - Add functionality to find groups bigger than 2.
 - Add a section to select your 3 best characters/champions.
 ---
-### Resources
-- https://docs.google.com/document/d/11Hnt1kY65JVVlYhsefea75ddh29FuVeZwx-HwD_yeRk/edit
-- 
+### ERD Chart
+ ![ERD](https://imgur.com/qIKirBE.png)
+---
+### REST Chart
+![REST](https://imgur.com/OVeRThN.png)
+---
+### User Stories
+- AAU I want to be able to create an account, select my favorite game, display my rank, and find other users that play the same game. 
