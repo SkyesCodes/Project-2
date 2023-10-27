@@ -26,10 +26,10 @@
 - Add a section to select your 3 best characters/champions.
 ---
 ### ERD Chart
- ![ERD](https://imgur.com/qIKirBE.png)
+ ![ERD](https://imgur.com/EwJxfO9.png)
 ---
 ### REST Chart
-![REST](https://imgur.com/OVeRThN.png)
+![REST](https://imgur.com/fyvuCEC.png)
 ---
 ### User Stories
 - AAU I want to be able to create an account, select my favorite game, display my rank, and find other users that play the same game. 
