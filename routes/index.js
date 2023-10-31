@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const indexRouter = require("../controllers/index.js")
+const profileRouter = require('../controllers/profile')
 
 router.get('/', indexRouter.index);
 
@@ -32,6 +33,5 @@ router.get('/logout', function(req, res){
     res.redirect('/');
   });
 });
-
-
+router.get('../controllers/profile', profileRouter.index);
 module.exports = router;

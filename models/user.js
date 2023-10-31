@@ -1,7 +1,7 @@
 const { resolveInclude } = require('ejs');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const profile = require('/controllers/profile');
+
 
 const userSchema = new Schema({
   name: String,
@@ -15,9 +15,9 @@ const userSchema = new Schema({
 {
   timestamps: true
 });
-//const profileSchema = new Schema({
-//  res.render(profile)
-//})
+const profileSchema = new Schema({
+ res.render(profile)})
+
 
 module.exports = mongoose.model('User', userSchema);
 //module.exports = mongoose.model('User', profileSchema);

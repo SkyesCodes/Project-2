@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const profile = require('./views/profile/profile');
 
 require('dotenv').config();
 require('./config/database');
@@ -57,5 +58,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+app.use(profile)
 module.exports = app;

@@ -1,9 +1,13 @@
+const user = require('../models/user')
 module.exports = {
-    profile
-  }
+  profile
+}
+
   
   function profile(req, res) {
-    res.render("profile", {
+    res.render(user, {
       title: "Profile"
     });
   }
+
+ 
