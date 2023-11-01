@@ -11,5 +11,9 @@
 		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
 	<% } %>
 <% } %>
-
+<tbody>
+    <% profile.forEach(function(p) { %>
+        <a href="/profile/<%= p._id %>">profile/a>
+      <% }); %>
+    </tbody>
 <%- include('./partials/footer') %>
