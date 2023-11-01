@@ -1,56 +1,22 @@
-<%- include('./partials/header') %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duo Finder Profile</title>
-</head>
-<body>
-    <div>
-        <h2>Choose your games and rank below</h2>
-        <select name="Choose the games you play">
-            <option value="League of Legends"></option>
-            <option value="Apex Legends"></option>
-            <option value="Valotant"></option>
-        </select>
-        <div class="honestyMessage">Please be honest when displaying your rank, it will improve your experience here.</div>
-        <select name="Display your rank for League of Legends">
-            <option value="Iron"></option>
-            <option value = "Bronze"></option>
-            <option value = "Silver"></option>
-            <option value="Gold"></option>
-            <option value = "Platinum"></option>
-            <option value = "Emerald"></option>
-            <option value = "Diamond"></option>
-            <option value = "Master"></option>
-            <option value = "Grandmaster"></option>
-            <option value = "Challenger"></option>
-        </select>
-        <select name = "Display your rank for Valorant">
-            <option value = "Iron"></option>
-            <option value = "Bronze"></option>
-            <option value = "Silver"></option>
-            <option value = "Gold"></option>
-            <option value = "Platinum"></option>
-            <option value = "Diamond"></option>
-            <option value = "Ascendant"></option>
-            <option value = "Immortal"></option>
-        </select>
-        <select name = "Display your rank for Apex Legends">
-            <option value = "Iron"></option>
-            <option value = "Bronze"></option>
-            <option value = "Silver"></option>
-            <option value = "Gold"></option>
-            <option value = "Platinum"></option>
-            <option value = "Diamond"></option>
-            <option value = "Master"></option>
-            <option value = "Apex Predator"></option>
-        </select>
-    </div>
-    
-</body>
-</html>
-<%- include('./partials/footer') %>
+<%- include('../partials/header') %>
 
-
+<table id="list">
+  <thead>
+    <tr>
+      <th>Profiles</th>
+      <th>Games<br>Ranks</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% profile.forEach(function(p) { %>
+      <tr>
+        <td><%= p.games %></td>
+        <td><%= p.rank %></td>
+        <td><a href="/profile/<%= p._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
