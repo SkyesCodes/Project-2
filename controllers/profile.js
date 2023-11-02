@@ -26,7 +26,7 @@ const Profile = require('../models/profile');
   
   async function newProfile(req, res) {
  
-res.render('/profile/new', { title: 'Create Profile', errorMsg: '' });
+res.render('profile/new', { title: 'Create Profile', errorMsg: '' });
   }
   
   async function show(req, res) {
@@ -42,24 +42,25 @@ res.render('/profile/new', { title: 'Create Profile', errorMsg: '' });
     } catch (err) {
      
       console.log(err);
-      res.render('/profile', { errorMsg: err.message });
+      res.render('profile', { errorMsg: err.message });
     }}
   
     async function create(req, res) {
       const profile = await Profile.findById(req.params.id);
     
-     
-      req.body.user = req.user._id;
-      profile.games.push(req.body);
-      profile.ranks.push(req.body);
-      profile.userName.push(req.body);
-      try {
-        
-        await profile.save();
-      } catch (err) {
-        console.log(err);
+      for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
       }
-      res.redirect(`/profile/${profile._id}`);
+      try {
+     
+        const profile = await Profile.create(req.body);
+       
+        res.redirect(`/profile/${profile._id}`);
+      } catch (err) {
+   
+        console.log(err);
+        res.render('profile/new', { errorMsg: err.message });
+      }
     }
     async function deleteProfile(req, res) {
       const profile = await Profile.findOne({ 'userName._id': req.params.id, 'userName.user': req.user._id });

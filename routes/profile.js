@@ -17,4 +17,6 @@ router.post('/profile/:id/profile', ensureLoggedIn, profileCtrl.create);
 
 router.delete('/profile.username/:id', ensureLoggedIn, profileCtrl.delete);
 
+router.delete('/profile/:id/profile', ensureLoggedIn, profileCtrl.delete);
+
 module.exports = router;

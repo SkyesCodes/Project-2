@@ -9,12 +9,12 @@ const passport = require('passport');
 
 require('dotenv').config();
 require('./config/database');
-
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const profileRouter = require('./routes/profile');
 const gamesRouter = require('./routes/games');
+const finderRouter = require ('./routes/finder')
 
 const app = express();
 
@@ -46,6 +46,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/profile', profileRouter);
 app.use('/games', gamesRouter);
+app.use('/finder', finderRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -3,17 +3,14 @@
 <table id="list">
   <thead>
     <tr>
-      <th>Title</th>
-     
+      <th>Games</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <% games.forEach(function(g) { %>
       <tr>
-        <td><%= g.title %></td>
-      
-        <td><a href="/games/index<%= g._id %>">Games</a></td>
+        <td><%= g.name %></td>
       </tr>
       <% }); %>
     </tbody>
