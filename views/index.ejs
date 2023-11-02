@@ -6,12 +6,16 @@
 <% if (!user) { %>
 	<p>Login or create an account with google</p>
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	
 <% } else { %>
 	<p>Welcome, <%= user.name %> <%= user.email %></p>
 	<% if (user.avatar) { %>
 		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
+		<p><a href = "/profile/new"> create your profile</a> </p>
+		<p><a href="/games/index"> See all games</a> </p>
+		<p><a href="/DuoFinder/finder">Find your Duo!</a></p>
 	<% } %>
-<% } %>
+<% } %> 
 
 
 <%- include('./partials/footer') %>

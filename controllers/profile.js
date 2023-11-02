@@ -24,9 +24,9 @@ const Profile = require('../models/profile');
     res.render('profile/profile', { title: 'Profile Details', user, profile });
   }
   
-  function newProfile(req, res) {
-   
-    res.render('/profile', { title: 'Create Profile', errorMsg: '' });
+  async function newProfile(req, res) {
+ 
+res.render('/profile/new', { title: 'Create Profile', errorMsg: '' });
   }
   
   async function show(req, res) {

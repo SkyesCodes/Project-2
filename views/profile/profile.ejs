@@ -9,10 +9,11 @@
     </tr>
   </thead>
   <tbody>
-    <% profile.forEach(function(p) { %>
+    <% new.forEach(function(n) { %>
       <tr>
-        <td><%= p.games %></td>
-        <td><%= p.rank %></td>
+        <td><%= n.games %></td>
+        <td><%= n.rank %></td>
+        <td><%= n.username %></td>
         <td><a href="/profile/<%= p._id %>">DETAILS</a></td>
       </tr>
       <% }); %>

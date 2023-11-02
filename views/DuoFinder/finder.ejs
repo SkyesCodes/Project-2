@@ -2,18 +2,17 @@
 
 <h2>Welcome to Duo Finder!</h2>
 
-<% if (!user) { %>
+<% if (user) { %>
 	<p>Check out other users below</p>
 	<div class="g-signin2" data-onsuccess="onSignIn"></div>
-<% } else { %>
-	<p>Welcome, <%= user.name %> <%= user.email %></p>
+	<p>Welcome, <%= user.name %></p>
 	<% if (user.avatar) { %>
-		<img src="<%= user.avatar %>" alt="<%= user.name %>'s avatar" />
+		<img src="<%= user.avatar %>"/>
 	<% } %>
 <% } %>
 <tbody>
     <% user.forEach(function(u) { %>
-        <a href="/user/<%= u._id %>">Usersa>
+        <a href="/user/<%= u._id %>">Users>
       <% }); %>
       
     <% profile.forEach(function(p) { %>
