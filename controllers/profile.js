@@ -8,7 +8,8 @@ const Profile = require('../models/profile');
     show,
     new: newProfile,
     create,
-    delete: deleteProfile
+    delete: deleteProfile,
+    update
   };
   
   async function index(req, res) {
@@ -66,6 +67,13 @@ res.render('profile/new', { title: 'Create Profile', errorMsg: '' });
       const profile = await Profile.findOne({ 'userName._id': req.params.id, 'userName.user': req.user._id });
       if (!profile) return res.redirect('/profile');
       profile.userName.remove(req.params.id);
+      await profile.save();
+      res.redirect(`/profile/${profile._id}`);
+    }
+
+    async function update(req, res) {
+      const profile = await Profile.findById(req.params.id);
+      profile.cast.push(req.body.profileId);
       await profile.save();
       res.redirect(`/profile/${profile._id}`);
     }

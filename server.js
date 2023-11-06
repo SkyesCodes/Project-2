@@ -5,11 +5,12 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
-
+const methodOverride = require('method-override')
 
 require('dotenv').config();
 require('./config/database');
 require('./config/passport');
+
 
 const indexRouter = require('./routes/index');
 const profileRouter = require('./routes/profile');
@@ -21,7 +22,7 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
+app.use(methodOverride('_method'))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
