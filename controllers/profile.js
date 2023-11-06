@@ -9,7 +9,7 @@ const Profile = require('../models/profile');
     new: newProfile,
     create,
     delete: deleteProfile,
-    update
+    put: update
   };
   
   async function index(req, res) {
